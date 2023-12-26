@@ -1,0 +1,27 @@
+{% extends 'layout.html' %} 
+{% load static %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'pages/css/style.css' %}" />
+{% endblock %}
+{% block page_title %} hakkımızda {% endblock %} {%block content%}
+<body style=" background: url('https://media.istockphoto.com/id/657982726/tr/foto%C4%9Fraf/k%C4%B1rm%C4%B1z%C4%B1-siyah-arka-plan.jpg?s=170667a&w=0&k=20&c=611dLw0kkFpE1qrpTPzjy_JHo7fIxUXK7sGWIlzAC8E=') no-repeat center center fixed; background-size: cover;  ">
+    <div class="heading">
+        <h1 style="color: #fff;">HAKKIMIZDA</h1>
+        <p style="color: #fff;">FİLMİX ve KEŞFETMEYE SEVEN İKİ ÖĞRENCİ</p>
+    </div>
+    <div class="container">
+        <section class="about">
+            <div class="about-image">
+                <img src="{% static 'filmler/image/harry.gif' %}">
+            </div>
+            <div class="about-content">
+                <h2 style="color: #fff;">BİZ KİMİZ ?</h2>
+                <p style="color: #fff;">Dizi film izlemek sadece vakit geçirmek için yapılan bir aktivite değildir. Aslında hayal dünyamızın kapılarını aralayan sinema perdeleri ruhumuzda da yeni yollar keşfetmemize ve iç görümüzü arttırmamızı sağlar. Kendimizi bazen bir film karekteriyle eşleştirir ve hayatımıza ışık olacak yeni bir bakış açısına sahip oluruz. evet işte bu yüzden sadece bir aktivite değil bir arayıştır "dizi" ve "film" 'ler. Biz Kimiz ? Biz iki yazılımcı olarak bu arayışta iki genciz. Önerilerimile bizim gibi olanların keşiflerine ışık olabilmesi için bu projeye gerçekleştirdik. İyi seyirler..DEMO YAZI.</p>
+                <a href="" class="read-more" style="color: #fff;">Daha Fazla Oku</a>
+            </div>
+        </section>
+    </div>
+</body>
+{% endblock %}
+
+

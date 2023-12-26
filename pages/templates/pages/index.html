@@ -1,0 +1,128 @@
+{% extends 'layout.html' %} 
+{% load static %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'pages/css/netflix.css' %}" />
+<link rel="stylesheet" href="{% static 'pages/css/style3.css' %}" />
+{% endblock %}
+{% block page_title %} anasayfa {% endblock %} {%block content %}
+<body style="background-color: #8B0000;">  
+ 
+ <!--netflix slider kısmı--> 
+ <div class="netflix-logo" style="height: 400px; margin-bottom: 0; background: url('https://img.wattpad.com/8f8c253ad3580d41c5200b734a685e29a0f58447/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6955334d4b523153772d4a5263773d3d2d3936383033383432352e313634306330663064346463343366323838343434313936313830392e676966') no-repeat center center fixed; background-size: cover;  background-size: cover; margin: 0; padding: 0; ">
+  <div style="display: flex; flex-direction: column; align-items: flex-start; padding-left: 30px;">
+    <h1 class="slider-text" style="color: #fff; font-size: 50px;">Hoş Geldiniz. </h1>
+    <h1 class="slider-text" style="color: #fff; font-size: 34px;">Milyonlarca Film ve TV Şovu </h1>
+    <h1 class="slider-text" style="color: #fff;font-size: 34px;">Şimdi Keşfedin </h1>
+ </div>
+</div>
+
+
+
+
+            
+            
+<!--Trend  fİLMLER-->
+
+<section class="netflix-container" style="  margin: 0;  padding: 0;background: url('https://media.istockphoto.com/id/657982726/tr/foto%C4%9Fraf/k%C4%B1rm%C4%B1z%C4%B1-siyah-arka-plan.jpg?s=170667a&w=0&k=20&c=611dLw0kkFpE1qrpTPzjy_JHo7fIxUXK7sGWIlzAC8E=') no-repeat center center fixed; background-size: cover;  display: flex;flex-direction: column; align-items: flex-start;  padding-left: 90px; width: 100%;">
+  <div class="trend-section" style="margin: 10px 0; padding-left: -20px;">
+      <h1 class="slider-text" style="color: white;font-size: 24px;">Trend Filmler</h1> 
+  </div>
+
+  <!-- Trend Movies Section -->
+  <div class="carousel" style="margin-bottom: 80px;margin-top: 20px; ">
+      <div class="carouselbox" id="movieCarousel">
+          <!-- Content for the popular movies section goes here -->
+      </div>
+      <a class="switchLeft sliderButton" onclick="sliderScrollLeft('movieCarousel')"></a>
+      <a class="switchRight sliderButton" onclick="sliderScrollRight('movieCarousel')"></a>
+  </div>
+</section>
+ 
+
+
+<!--TV show-->
+<section class="netflix-container" style=" margin: 0;  padding: 0;background: url('https://media.istockphoto.com/id/1140997685/photo/red-mottled-background-abstract-wallpaper-pattern.jpg?s=612x612&w=0&k=20&c=xFkCQnazwMZx4wBY969XxMmroNJ0sVimSb-lHlxnp98=') no-repeat center center fixed; background-size: cover;  display: flex;flex-direction: column; align-items: flex-start;  padding-left: 90px; width: 100%;">
+  <div class="trend-section" style="margin: 10px 0; padding-left: -20px;">
+      <h1 class="slider-text" style="color: white;font-size: 24px;">TV Show</h1> 
+  </div>
+
+  <!-- Tv Show Section -->
+  <div class="carousel" style="margin-bottom: 80px; margin-top: 20px; ">
+      <div class="carouselbox" id="tvShowCarousel">
+          <!-- Content for the popular movies section goes here -->
+      </div>
+      <a class="switchLeft sliderButton" onclick="sliderScrollLeft('tvShowCarousel')"></a>
+      <a class="switchRight sliderButton" onclick="sliderScrollRight('tvShowCarousel')"></a>
+  </div>
+</section>
+
+
+
+
+ <!--En Çok Oy Alanlar-->
+ <section class="netflix-container" style=" margin: 0;  padding: 0;background: url('https://media.istockphoto.com/id/1140997685/photo/red-mottled-background-abstract-wallpaper-pattern.jpg?s=612x612&w=0&k=20&c=xFkCQnazwMZx4wBY969XxMmroNJ0sVimSb-lHlxnp98=') no-repeat center center fixed; background-size: cover;  display: flex;flex-direction: column; align-items: flex-start; padding-left: 90px; width: 100%;">
+  <div class="trend-section" style="margin: 10px 0; padding-left: -20px;">
+      <h1 class="slider-text" style="color: white; font-size: 24px;">En Çok Oy Alanlar</h1> 
+  </div>
+
+  <!-- En Çok Oy Alanlar -->
+  <div class="carousel" style="margin-bottom: 80px; margin-top: 20px;">
+    <div class="carouselbox" id="topRatedMoviesCarousel"></div>
+    <a class="switchLeft sliderButton" onclick="sliderScrollLeftMovies('topRatedMoviesCarousel')"></a>
+    <a class="switchRight sliderButton" onclick="sliderScrollRightMovies('topRatedMoviesCarousel')"></a>
+</div>
+</section>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.js"></script>
+   
+  <!--filmler kısmı-->
+
+    
+     
+ 
+    <section class="main-section" style="background: url('https://static.vecteezy.com/system/resources/thumbnails/004/122/863/small/white-gray-background-with-soft-watercolor-texture-vector.jpg') no-repeat center center fixed; background-size: cover;  display: flex;flex-direction: column; align-items: flex-start; display: flex;flex-direction: column; align-items: flex-start;">
+    <main id="main" style="margin-top: 200px; justify-content: center;">
+    <div class="cult-movies" style="margin-top: -80px;" >
+    </div> 
+    </main>
+</section>
+
+
+ <!--site en alt kısmı-->
+  <section class="netflix-fnish" style=" width: 100%;">
+  <div class="fnish-div" style=" max-width: 1200px; margin: 0 auto;padding: 120px; box-sizing: border-box; ">
+    
+    <h1 style="color: white;">Hayat kötü Filmler İzlemek İçin Çok Kısa !</h1>
+    <br>
+    <h2 style="color: white; ">Bizi Takipte Kalın</h2> 
+    
+  </div>
+  <!-- Social Media Links -->
+<div class="social-media-links" style="display: flex; flex-direction: row; align-items: center; justify-content: center; margin-top: -60px;">
+  <!-- Replace the placeholder URLs with your actual social media URLs -->
+  <a href="https://twitter.com/YourTwitterHandle" target="_blank" rel="noopener noreferrer">
+      <img src="{% static 'filmler/image/twitterrr.png' %}" alt="Twitter" class="social-icon" style="width: 30px; height: 30px; margin-right: 10px;">
+  </a>
+  <a href="https://facebook.com/YourFacebookPage" target="_blank" rel="noopener noreferrer">
+      <img src="{% static 'filmler/image/facebook--.png' %}" alt="Facebook" class="social-icon" style="width: 30px; height: 30px; margin-right: 10px;">
+  </a>
+  <a href="https://instagram.com/YourInstagramProfile" target="_blank" rel="noopener noreferrer">
+      <img src="{% static 'filmler/image/insttt.png' %}" alt="Instagram" class="social-icon" style="width: 30px; height: 30px;">
+  </a>
+  <!-- Add more social media links as needed -->
+</div>
+  </section>
+  
+   
+ 
+</body>
+{% endblock %} 
+{% block js_files %}
+ <script src="{% static 'pages/javascript/script.js' %}"></script>
+ <script src="{% static 'pages/javascript/trendingMovies.js' %}" ></script> 
+ <script src="{% static 'pages/javascript/trendingTVShows.js' %}" ></script>
+ <script src="{% static 'pages/javascript/topRatedMovies.js' %}" ></script>
+{% endblock%}
+

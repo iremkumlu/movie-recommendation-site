@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load static %} 
+{% block css_files %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="{% static 'pages/css/style2.css' %}" />
+{% endblock %} 
+{% block page_title %} iletişim {% endblock %} {%block content %}
+<body style="background: url('https://media.istockphoto.com/id/657982726/tr/foto%C4%9Fraf/k%C4%B1rm%C4%B1z%C4%B1-siyah-arka-plan.jpg?s=170667a&w=0&k=20&c=611dLw0kkFpE1qrpTPzjy_JHo7fIxUXK7sGWIlzAC8E=') no-repeat center center fixed; background-size: cover;">
+  <section class="contact">
+    <div class="container">
+        <h2 style="color: #fff;">CONTACT US</h2>
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <h3 style="color: #fff;">Send us a message</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3 style="color: #fff;">Contact Information</h3>
+                <p style="color: #fff;"><i class="fas fa-phone"></i>+0555 555 55 55</p>
+                <p style="color: #fff;"><i class="fas fa-envelope"></i>info@example.com</p>
+                <p style="color: #fff;"><i class="fas fa-map-marker-alt"></i>123 street, City, Country</p>
+            </div>
+        
+        </div>
+    </div>
+ </section>
+
+</background:>
+{% endblock %}
